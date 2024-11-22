@@ -158,7 +158,8 @@ def parse_args():
         "-s",
         "--schlagwoerter",
         help="Search for the provided keywords",
-        required=False  # Make this optional
+        required=True,
+        default="Gasag AG" # TODO replace default with a generic search term
     )
     parser.add_argument(
         "-so",
@@ -170,7 +171,7 @@ def parse_args():
     parser.add_argument(
         "-n",
         "--registerNummer",
-        help="Force a fresh pull and skip the cache",
+        help="Add registry number to improve search results",
         required=False
     )
     args = parser.parse_args()
