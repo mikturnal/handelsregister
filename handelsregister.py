@@ -118,13 +118,6 @@ def parse_result(result):
     return d
 
 def pr_company_info(c):
-    for tag in ('name', 'court'):
-        print('%s: %s' % (tag, c.get(tag, '-')))
-    # print('history:')
-    # for name, loc in c.get('history'):
-    #     print(name, loc)
-
-def old_pr_company_info(c):
     for tag in ('name', 'court', 'state', 'status'):
         print('%s: %s' % (tag, c.get(tag, '-')))
     # print('history:')
